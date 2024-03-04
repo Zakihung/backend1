@@ -1,5 +1,5 @@
 const express = require("express");
-const contacts = require("../controller/contact.controller");
+const contacts = require("../controllers/contact.controller");
 
 const router = express.Router();
 
@@ -8,8 +8,8 @@ router.route("/")
     .post(contacts.create)
     .delete(contacts.deleteAll);
 
-router.route("/favourite")
-    .get(contacts.findAllFavourite);
+router.route("/favorite")
+    .get(contacts.findAllFavorite);
 
 router.route("/:id")
     .get(contacts.findOne)
